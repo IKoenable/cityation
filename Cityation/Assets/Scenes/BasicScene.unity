@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,9 +118,17 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &66398815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381845079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &69858667
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 10, z: -15}
-  target: {fileID: 271499272}
+  target: {fileID: 66398815}
   translateSpeed: 10
   rotationSpeed: 5
 --- !u!1001 &73844055
@@ -290,12 +298,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b2435440249d3479660f2addbb55da, type: 3}
---- !u!4 &271499272 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1266911832869864102, guid: 4e839d96a79ba864eb305c263c27797b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1167951193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &352979436
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d7786b74ff49640a5ac70a71f71eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputController: {fileID: 1502258974}
+  inputController: {fileID: 1502258974}
 --- !u!4 &874326211
 Transform:
   m_ObjectHideFlags: 0

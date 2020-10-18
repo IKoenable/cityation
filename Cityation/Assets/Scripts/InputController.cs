@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class InputController : MonoBehaviour
 
     public float ThrottleInput { get; private set; }
     public float SteerInput { get; private set; }
-    public bool isBraking { get; private set; }
+    public bool IsBraking { get; private set; }
 
 
     // Update is called once per frame
@@ -18,6 +16,6 @@ public class InputController : MonoBehaviour
     {
         SteerInput = Input.GetAxis(inputSteerAxis);
         ThrottleInput = Input.GetAxis(inputThrottleAxis);
-        isBraking = Input.GetKey(KeyCode.Space);
+        IsBraking = Input.GetKey(KeyCode.Space);
     }
 }

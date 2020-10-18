@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -13,27 +10,27 @@ public class CarController : MonoBehaviour
 
     public float Steer { get; set; }
     public float Throttle { get; set; }
-    public bool isBraking { get; set; }
+    public bool IsBraking { get; set; }
 
     private Rigidbody _rigidbody;
-    private Wheel[] wheels; // Array of wheels
+    private Wheel[] _wheels; // Array of wheels
 
     // public bool isControlled = true;
 
     void Start()
     {
-        wheels = GetComponentsInChildren<Wheel>(); // Grap all wheels
+        _wheels = GetComponentsInChildren<Wheel>(); // Grap all wheels
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 
     void Update()
     {
-        foreach (var wheel in wheels)
+        foreach (var wheel in _wheels)
         {
             wheel.SteerAngle = maxSteer * Steer;
             wheel.Torque = Throttle * motorTorque;
-            wheel.BrakeTorque = (isBraking ? maxBrakeTorque : 0f);
+            wheel.BrakeTorque = (IsBraking ? maxBrakeTorque : 0f);
         }    
 
     }
