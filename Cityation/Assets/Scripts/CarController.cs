@@ -19,7 +19,7 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
-        _wheels = GetComponentsInChildren<Wheel>(); // Grap all wheels
+        _wheels = GetComponentsInChildren<Wheel>();
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
@@ -32,7 +32,5 @@ public class CarController : MonoBehaviour
             wheel.Torque = Throttle * motorTorque;
             wheel.BrakeTorque = (IsBraking ? maxBrakeTorque : 0f);
         }    
-
     }
-
 }

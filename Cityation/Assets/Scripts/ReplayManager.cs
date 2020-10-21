@@ -1,21 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
 using UnityEngine;
-using System.IO;
-using System.Linq;
 
 public class ReplayManager : MonoBehaviour
 {
-    private Transform[] transforms;
-
-    private MemoryStream memoryStream = null;
-    private BinaryWriter binaryWriter = null;
-    private BinaryReader binaryReader = null;
-    private bool recordingInitialized=false;
     public bool IsRecording; // { get; private set; }
     public bool IsReplaying { get; private set; }
 
-
+    private Transform[] transforms;
+    private MemoryStream memoryStream = null;
+    private BinaryWriter binaryWriter = null;
+    private BinaryReader binaryReader = null;
+    private bool recordingInitialized = false;
 
     public void StartRecording()
     {
@@ -27,6 +22,7 @@ public class ReplayManager : MonoBehaviour
         {
             memoryStream.SetLength(0);
         }
+
         ResetReplayFrame();
         IsRecording = true;
     }
@@ -37,12 +33,12 @@ public class ReplayManager : MonoBehaviour
         {
             StopRecording();
         }
+
         if (recordingInitialized)
         {
             ResetReplayFrame();
             IsReplaying = true;
         }
-
     }
 
     public void StopRecording()
@@ -55,10 +51,8 @@ public class ReplayManager : MonoBehaviour
         IsReplaying = false;
     }
 
-
     void Start()
     {
-        //transforms = GetComponents<Transform>();
         transforms = GetComponents<Transform>();
         // transforms = transforms.Concat(<Transform>()).ToArray;
         IsRecording = false;
@@ -75,7 +69,6 @@ public class ReplayManager : MonoBehaviour
         {
             UpdateReplaying();
         }
-
     }
 
     private void UpdateRecording()
@@ -90,6 +83,7 @@ public class ReplayManager : MonoBehaviour
             StopReplaying();
             return;
         }
+
         LoadTransforms(transforms);
     }
 
@@ -100,10 +94,6 @@ public class ReplayManager : MonoBehaviour
         binaryReader = new BinaryReader(memoryStream);
         recordingInitialized = true;
     }
-
-
-
-
 
     private void ResetReplayFrame()
     {
@@ -130,7 +120,7 @@ public class ReplayManager : MonoBehaviour
 
     private void LoadTransforms(Transform[] transforms)
     {
-        foreach (Transform transform in transforms)
+        foreach (var transform in transforms)
         {
             LoadTransform(transform);
         }
@@ -138,7 +128,7 @@ public class ReplayManager : MonoBehaviour
 
     private void LoadTransform(Transform transform)
     {
-        float x= binaryReader.ReadSingle();
+        float x = binaryReader.ReadSingle();
         float y = binaryReader.ReadSingle();
         float z = binaryReader.ReadSingle();
         transform.position = new Vector3(x, y, z);
@@ -147,6 +137,4 @@ public class ReplayManager : MonoBehaviour
         float zRot = binaryReader.ReadSingle();
         transform.eulerAngles = new Vector3(xRot, yRot, zRot);
     }
-
-
 }

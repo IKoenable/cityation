@@ -4,9 +4,10 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public InputController inputController;
+    public int selectedCar = 0;
+
     private CarController[] _vehicles; // Array of vehicles
     private ReplayManager[] _replayManagers;
-    public int selectedCar = 0;
     private int _numberOfCars = 0;
     private CameraFollow _cameraFollow;
     private Vector3[] _initialPosition;
@@ -30,7 +31,6 @@ public class GameManager : MonoBehaviour
 
         _cameraFollow = FindObjectOfType<CameraFollow>();
         SelectCar(selectedCar);
-
     }
 
     // Update is called once per frame
@@ -39,9 +39,13 @@ public class GameManager : MonoBehaviour
         foreach (var vehicle in _vehicles)
         {
             if (vehicle.isControlled)
-            { SteerFromInput(vehicle); }
+            {
+                SteerFromInput(vehicle);
+            }
             else
-            { SteerFromAI(vehicle); }
+            {
+                SteerFromAI(vehicle);
+            }
         }
         
         if (_vehicles[selectedCar].gameObject.transform.position.z > 200)
@@ -70,13 +74,11 @@ public class GameManager : MonoBehaviour
         if (_replayManagers[selectedCar].IsRecording)
         {
             _replayManagers[selectedCar].StopRecording();
-
         }
 
         _vehicles[selectedCar].isControlled = false;
         selectedCar = iSelect;
         _vehicles[selectedCar].isControlled = true;
-
         _transforms[selectedCar].position = _initialPosition[selectedCar];
 
         for (int i = 0; i < _numberOfCars; i++)
@@ -92,5 +94,4 @@ public class GameManager : MonoBehaviour
         }
         _cameraFollow.target = _vehicles[selectedCar].gameObject.transform;
     }
-    
 }

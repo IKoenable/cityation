@@ -19,7 +19,6 @@ public class Wheel : MonoBehaviour
         _wheelCollider = GetComponentInChildren<WheelCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _wheelCollider.GetWorldPose(out Vector3 pos, out Quaternion rot);
