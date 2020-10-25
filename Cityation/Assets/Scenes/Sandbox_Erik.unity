@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &69858671
 MonoBehaviour:
@@ -234,6 +234,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 667148734113078992, guid: 50b2435440249d3479660f2addbb55da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 667148734113078992, guid: 50b2435440249d3479660f2addbb55da,
+        type: 3}
+      propertyPath: isControlled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
         type: 3}
@@ -382,8 +392,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &721924568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 243152487530911230, guid: 50b2435440249d3479660f2addbb55da,
+    type: 3}
+  m_PrefabInstance: {fileID: 73844055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &721924569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721924568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &721924572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721924568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fbd3d3983e2bf4ab17d974dc6bc424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874326209
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874326211}
-  - component: {fileID: 874326210}
+  - component: {fileID: 874326212}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -401,20 +441,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &874326210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874326209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d7786b74ff49640a5ac70a71f71eab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputController: {fileID: 1502258974}
-  selectedCar: 0
 --- !u!4 &874326211
 Transform:
   m_ObjectHideFlags: 0
@@ -425,11 +451,83 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.963392, z: -0.006775975}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1502258975}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874326212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874326209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cdf4cf395ea0140a2ec7f28ca6e5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCarIndex: 0
+--- !u!1 &937796250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 243152487530911230, guid: 50b2435440249d3479660f2addbb55da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1210024105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &937796251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937796250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &937796255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937796250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fbd3d3983e2bf4ab17d974dc6bc424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1142979749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 243152487530911230, guid: 50b2435440249d3479660f2addbb55da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1609751963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1142979750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142979749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1142979754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142979749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fbd3d3983e2bf4ab17d974dc6bc424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1210024105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441,6 +539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 667148734113078992, guid: 50b2435440249d3479660f2addbb55da,
+        type: 3}
+      propertyPath: isControlled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
         type: 3}
@@ -480,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
         type: 3}
@@ -514,51 +617,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b3d364d4a09f2aa489cd90cc228262b5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b2435440249d3479660f2addbb55da, type: 3}
---- !u!1 &1502258973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1502258975}
-  - component: {fileID: 1502258974}
-  m_Layer: 0
-  m_Name: InputController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1502258974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502258973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35a6532dd08b764f962117f38fb2778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputSteerAxis: Horizontal
-  inputThrottleAxis: Vertical
---- !u!4 &1502258975
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502258973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 874326211}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1609751963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,6 +628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: YellowCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 667148734113078992, guid: 50b2435440249d3479660f2addbb55da,
+        type: 3}
+      propertyPath: isControlled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 786688434811225662, guid: 50b2435440249d3479660f2addbb55da,
         type: 3}
@@ -832,7 +895,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088992898
 GameObject:
