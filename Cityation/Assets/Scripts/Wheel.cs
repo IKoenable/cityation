@@ -2,11 +2,11 @@
 
 public class Wheel : MonoBehaviour
 {
-    public bool steer;
-    public bool inverSteer;
-    public bool power;
-    public bool hasBrakes;
-    public Transform wheelTransform;
+    [SerializeField] private bool _steer = false;
+    [SerializeField] private bool _invertSteer = false;
+    [SerializeField] private bool _power = true;
+    [SerializeField] private bool _hasBrakes = true;
+    [SerializeField] private Transform _wheelTransform = null;
 
     public float SteerAngle { get; set; }
     public float Torque { get; set; }
@@ -19,27 +19,26 @@ public class Wheel : MonoBehaviour
         _wheelCollider = GetComponentInChildren<WheelCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _wheelCollider.GetWorldPose(out Vector3 pos, out Quaternion rot);
-        wheelTransform.position = pos;
-        wheelTransform.rotation = rot;
+        _wheelTransform.position = pos;
+        _wheelTransform.rotation = rot;
     }
 
     private void FixedUpdate()
     {
-        if (steer)
+        if (_steer)
         {
-            _wheelCollider.steerAngle = SteerAngle * (inverSteer ? -1 : 1); 
+            _wheelCollider.steerAngle = SteerAngle * (_invertSteer ? -1 : 1); 
         }
 
-        if (power)
+        if (_power)
         {
             _wheelCollider.motorTorque = Torque;
         }
 
-        if (hasBrakes)
+        if (_hasBrakes)
         {
             _wheelCollider.brakeTorque = BrakeTorque;
         }
