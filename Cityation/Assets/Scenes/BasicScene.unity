@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &66398815 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1266911832869864102, guid: 50b2435440249d3479660f2addbb55da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1381845079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &69858667
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,10 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904d4d3331f1c844ab5edaa261400c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 10, z: -15}
-  target: {fileID: 66398815}
-  translateSpeed: 10
-  rotationSpeed: 5
+  Target: {fileID: 0}
+  _rotationSpeed: 0
+  _offset: {x: 0, y: 0, z: 0}
+  _translateSpeed: 0
 --- !u!1001 &73844055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputController: {fileID: 0}
 --- !u!1001 &1167951193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,6 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputController: {fileID: 1381845080}
 --- !u!1001 &1381845079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -635,6 +631,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b2435440249d3479660f2addbb55da, type: 3}
+--- !u!114 &1381845080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1753553491731733107, guid: 50b2435440249d3479660f2addbb55da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381845079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204937309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc9e6269e267bd4dadb556ccb353a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483350286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 243152487530911230, guid: 50b2435440249d3479660f2addbb55da,
@@ -665,6 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fb6cd79567aa94091079bc602c8f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputController: {fileID: 0}
 --- !u!1 &1836589606
 GameObject:
   m_ObjectHideFlags: 0

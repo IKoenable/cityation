@@ -158,11 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1835f8728ba8f024c925e310ebbbd60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steer: 0
-  inverSteer: 0
-  power: 0
-  hasBrakes: 1
-  wheelTransform: {fileID: 1964613632994194279}
+  _steer: 0
+  InverSteer: 0
+  Power: 0
+  HasBrakes: 1
+  WheelTransform: {fileID: 1964613632994194279}
 --- !u!1 &4606827245139337185
 GameObject:
   m_ObjectHideFlags: 0

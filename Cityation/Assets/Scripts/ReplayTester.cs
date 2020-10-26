@@ -2,7 +2,7 @@
 
 public class ReplayTester : MonoBehaviour
 {
-    public int selectedCarIndex = 0;
+    [SerializeField] public int SelectedCarIndex = 0;
 
     private Car[] _cars;
     private CameraFollow _cameraFollow;
@@ -13,27 +13,27 @@ public class ReplayTester : MonoBehaviour
 
         foreach (var car in _cars)
         {
-            car.isControlled = false;
+            car.IsControlled = false;
         }
 
         _cameraFollow = FindObjectOfType<CameraFollow>();
-        _changeSelectedCarTo(selectedCarIndex);
+        _changeSelectedCarTo(SelectedCarIndex);
     }
 
     void Update()
     {
-        if (_cars[selectedCarIndex].gameObject.transform.position.z > 20)
+        if (_cars[SelectedCarIndex].gameObject.transform.position.z > 20)
         {
             Debug.Log("Car reached trigger");
-            _changeSelectedCarTo((selectedCarIndex + 1) % _cars.Length);
+            _changeSelectedCarTo((SelectedCarIndex + 1) % _cars.Length);
         }
     }
 
     private void _changeSelectedCarTo(int newSelectedCarIndex)
     {
-        _cars[selectedCarIndex].isControlled = false;
+        _cars[SelectedCarIndex].IsControlled = false;
 
-        _cars[newSelectedCarIndex].isControlled = true;
+        _cars[newSelectedCarIndex].IsControlled = true;
         _cars[newSelectedCarIndex].ResetToInitialPosition();
         _cars[newSelectedCarIndex].StopReplaying();
         _cars[newSelectedCarIndex].StartRecording();
@@ -46,8 +46,8 @@ public class ReplayTester : MonoBehaviour
             }
         }
 
-        _cameraFollow.target = _cars[newSelectedCarIndex].gameObject.transform;
+        _cameraFollow.Target = _cars[newSelectedCarIndex].gameObject.transform;
 
-        selectedCarIndex = newSelectedCarIndex;
+        SelectedCarIndex = newSelectedCarIndex;
     }
 }

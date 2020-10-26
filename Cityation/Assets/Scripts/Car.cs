@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    public bool isControlled = true;
-    public float maxSteer = 20f;
-    public float motorTorque = 1200f;
-    public float maxBrakeTorque= 2000f; // per wheel
-    public Transform centerOfMass;
+    [SerializeField] public bool IsControlled = true;
+
+    [SerializeField] private float _maxSteer = 20f;
+    [SerializeField] private float _motorTorque = 1200f;
+    [SerializeField] private float _maxBrakeTorque= 2000f; // per wheel
+    [SerializeField] private Transform _centerOfMass = null;
 
     public float Steer { get; set; }
     public float Throttle { get; set; }
@@ -22,7 +23,7 @@ public class Car : MonoBehaviour
     {
         _wheels = GetComponentsInChildren<Wheel>();
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.centerOfMass = centerOfMass.localPosition;
+        _rigidbody.centerOfMass = _centerOfMass.localPosition;
         _replayManager = GetComponent<ReplayManager>();
         _positionRecorder = GetComponent<PositionRecorder>();
         _initialPosition = transform.position;
@@ -32,9 +33,9 @@ public class Car : MonoBehaviour
     {
         foreach (var wheel in _wheels)
         {
-            wheel.SteerAngle = maxSteer * Steer;
-            wheel.Torque = Throttle * motorTorque;
-            wheel.BrakeTorque = (IsBraking ? maxBrakeTorque : 0f);
+            wheel.SteerAngle = _maxSteer * Steer;
+            wheel.Torque = Throttle * _motorTorque;
+            wheel.BrakeTorque = (IsBraking ? _maxBrakeTorque : 0f);
         }    
     }
 

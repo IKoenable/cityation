@@ -2,8 +2,7 @@
 
 public class PlayerCarController : MonoBehaviour
 {
-    private readonly string _inputSteerAxis = "Horizontal";
-    private readonly string _inputThrottleAxis = "Vertical";
+    [SerializeField] InputController _inputController = null;
 
     private Car _car;
 
@@ -14,11 +13,11 @@ public class PlayerCarController : MonoBehaviour
 
     void Update()
     {
-        if (_car.isControlled)
+        if (_car.IsControlled)
         {
-            _car.Steer = Input.GetAxis(_inputSteerAxis);
-            _car.Throttle = Input.GetAxis(_inputThrottleAxis);
-            _car.IsBraking = Input.GetKey(KeyCode.Space);
+            _car.Steer = _inputController.Steer;
+            _car.Throttle = _inputController.Throttle;
+            _car.IsBraking = _inputController.IsBraking;
         }
         else
         {
