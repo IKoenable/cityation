@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1822736746573719120}
   - component: {fileID: 1672589583376172498}
   m_Layer: 9
-  m_Name: Parked Car 1
+  m_Name: Parked Car Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +569,8 @@ PrefabInstance:
       propertyPath: power
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8936212471373532945, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
 --- !u!4 &5855479285468352404 stripped
 Transform:
@@ -649,7 +650,8 @@ PrefabInstance:
       propertyPath: power
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8936212471373532945, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
 --- !u!4 &9009424691410502341 stripped
 Transform:
@@ -729,7 +731,8 @@ PrefabInstance:
       propertyPath: steer
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8936212471373532945, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
 --- !u!4 &194871729392700446 stripped
 Transform:
@@ -809,7 +812,8 @@ PrefabInstance:
       propertyPath: steer
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8936212471373532945, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 292bdce311e2bdf4d80c832786651c08, type: 3}
 --- !u!4 &2283586125744954286 stripped
 Transform:
