@@ -8,7 +8,8 @@ public class ReplayManager : MonoBehaviour
     private BinaryReader _binaryReader = null;
     private PositionRecorder _positionRecorder;
 
-    void Start()
+
+    void OnEnable()
     {
         _transforms = GetComponent<Transform>();
         _positionRecorder = GetComponent<PositionRecorder>();
@@ -23,7 +24,6 @@ public class ReplayManager : MonoBehaviour
                 StopReplaying();
                 return;
             }
-
             _loadTransform(transform);
         }
     }
