@@ -161,7 +161,7 @@ MonoBehaviour:
   _invertSteer: 0
   _power: 1
   _hasBrakes: 1
-  _wheelTransform: {fileID: 0}
+  _wheelTransform: {fileID: 1964613632994194279}
 --- !u!1 &4606827245139337185
 GameObject:
   m_ObjectHideFlags: 0
