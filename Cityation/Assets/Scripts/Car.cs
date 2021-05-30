@@ -19,7 +19,7 @@ public class Car : MonoBehaviour
     private PositionRecorder _positionRecorder;
     private Vector3 _initialPosition;
 
-    void Start()
+    void OnEnable()
     {
         _wheels = GetComponentsInChildren<Wheel>();
         _rigidbody = GetComponent<Rigidbody>();
