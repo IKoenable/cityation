@@ -7,8 +7,8 @@ public class CarButton : MonoBehaviour
 {
     public VehicleObjective VehicleObjective;
     //[SerializeField] int Number;
-    [SerializeField] RawImage UnCheckBox;
-    [SerializeField] RawImage CheckBox;
+    [SerializeField] RawImage UnCheckedBox;
+    [SerializeField] RawImage CheckedBox;
 
     [SerializeField] Text TitleText;
     [SerializeField] Text DescriptionText;
@@ -35,8 +35,8 @@ public class CarButton : MonoBehaviour
     {
         TitleText.text = VehicleObjective.name;
         DescriptionText.text = VehicleObjective.Description;
-        UnCheckBox.enabled = !VehicleObjective.IsCompleted;
-        CheckBox.enabled = VehicleObjective.IsCompleted;
+        UnCheckedBox.enabled = !VehicleObjective.IsCompleted;
+        CheckedBox.enabled = VehicleObjective.IsCompleted;
         IsActiveImage.enabled = VehicleObjective.IsActive;
     }
 }

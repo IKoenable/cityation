@@ -408,8 +408,11 @@ MonoBehaviour:
   IsCompleted: 0
   TimeLimit: 100
   Description: Reach the white sphere
+  IsActive: 0
   Destinations:
   - {fileID: 1023091448}
+  - {fileID: 777660268}
+  - {fileID: 1939549633}
   CompleteInOrder: 0
   Radius: 5
 --- !u!1 &398078671
@@ -693,6 +696,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b2435440249d3479660f2addbb55da, type: 3}
+--- !u!4 &777660268 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8946512688501146800, guid: 999a4eab53ea5a34c965e85db61850ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1357866869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1023091447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1350,7 @@ MonoBehaviour:
   IsCompleted: 0
   TimeLimit: 300
   Description: Reach the cube and come back to the bus stop
+  IsActive: 0
   Destinations:
   - {fileID: 1939549633}
   - {fileID: 1277703467}
@@ -1367,6 +1377,7 @@ MonoBehaviour:
   IsCompleted: 0
   TimeLimit: 300
   Description: Collect all white cylinders
+  IsActive: 0
   Destinations:
   - {fileID: 92129365}
   - {fileID: 1154324494}
