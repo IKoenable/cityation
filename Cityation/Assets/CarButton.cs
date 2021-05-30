@@ -12,6 +12,9 @@ public class CarButton : MonoBehaviour
 
     [SerializeField] Text TitleText;
     [SerializeField] Text DescriptionText;
+    [SerializeField] Image IsActiveImage;
+
+
     private Button _button;
     // Start is called before the first frame update
     private void OnEnable()
@@ -24,6 +27,8 @@ public class CarButton : MonoBehaviour
         UpdateStatus();
         VehicleObjective.OnComplete += UpdateStatus;
         VehicleObjective.OnReset += UpdateStatus;
+        VehicleObjective.OnMakeActive += UpdateStatus;
+        VehicleObjective.OnMakeInActive += UpdateStatus;
     }
 
     public void UpdateStatus()
@@ -32,5 +37,6 @@ public class CarButton : MonoBehaviour
         DescriptionText.text = VehicleObjective.Description;
         UnCheckBox.enabled = !VehicleObjective.IsCompleted;
         CheckBox.enabled = VehicleObjective.IsCompleted;
+        IsActiveImage.enabled = VehicleObjective.IsActive;
     }
 }

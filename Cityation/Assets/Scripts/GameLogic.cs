@@ -73,6 +73,8 @@ public class GameLogic : MonoBehaviour
         _resetCity();
         _remainingTime = VehicleObjectives[newSelectedCarIndex].TimeLimit;
         _cars[SelectedCarIndex].IsControlled = false;
+        VehicleObjectives[SelectedCarIndex].MakeInActive();
+        VehicleObjectives[newSelectedCarIndex].MakeActive();
         _cars[newSelectedCarIndex].IsControlled = true;
         _cars[newSelectedCarIndex].ResetToInitialPosition();
         VehicleObjectives[newSelectedCarIndex].ResetObjectives();
