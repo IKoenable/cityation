@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ChallengeSelectorViewStyle.uss?fileID=7433441132597879392&amp;guid=7a42e2edee36fa54ea030dc79b34e940&amp;type=3#ChallengeSelectorViewStyle" />
+    <ui:VisualElement name="container1" focusable="true" style="left: 20%; top: 20%; right: 20%; bottom: 20%; position: absolute;">
+        <ui:Label text="SELECT NEXT CHALLENGE" name="screen-title" style="padding-right: 0; padding-left: 0;" />
+        <ui:VisualElement name="background" focusable="true" class="background" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="challenge-list" mode="Horizontal" />
+            <ui:VisualElement name="detail-view" style="padding-left: 17px; padding-right: 17px; padding-top: 17px; padding-bottom: 17px;">
+                <ui:Label text="NAME" display-tooltip-when-elided="true" name="challenge-name" style="font-size: 42px; color: rgb(3, 3, 132); -unity-text-align: lower-center;" />
+                <ui:Label text="locked" display-tooltip-when-elided="true" name="challenge-state" style="font-size: 20px; margin-bottom: 10px; margin-left: 0; margin-right: 0; margin-top: 0; color: rgb(3, 3, 132); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                <ui:VisualElement name="challenge-content" style="flex-direction: row; align-items: center; justify-content: space-around; padding-left: 0; padding-right: 0; padding-top: 20px; padding-bottom: 20px;">
+                    <ui:VisualElement name="description-holder" style="width: 50%;">
+                        <ui:Label text="This is a description of the selected challenge. The user needs to do this one thing, and it&apos;s really important." display-tooltip-when-elided="false" name="challenge-description" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="image-holder" style="width: 50%;">
+                        <ui:VisualElement name="challenge-image" style="background-image: url(&apos;project://database/Assets/Images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg?fileID=2800000&amp;guid=fd21e44479ac910478ed446329f00edc&amp;type=3#pedro-lastra-Nyvq2juw4_o-unsplash&apos;); -unity-background-scale-mode: scale-to-fit; height: 235px; margin-left: 60px; margin-right: 60px; margin-top: 0; margin-bottom: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="button-container" focusable="true" style="justify-content: center; align-items: center; flex-direction: row; padding-left: 35px; padding-right: 35px; padding-top: 35px; padding-bottom: 35px;">
+                <ui:Button text="Resume" display-tooltip-when-elided="true" name="resume-button" class="button" style="display: none; visibility: visible;" />
+                <ui:Button text="Start challenge" display-tooltip-when-elided="true" name="start-button" class="button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

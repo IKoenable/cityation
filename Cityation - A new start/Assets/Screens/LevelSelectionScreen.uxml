@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:GroupBox style="height: 78px; background-color: rgb(18, 0, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: stretch; flex-direction: row; justify-content: space-between;">
+        <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" style="width: 174px; font-size: 40px;" />
+        <ui:Label text="SELECT LEVEL" display-tooltip-when-elided="true" style="font-size: 50%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(254, 255, 158); -unity-text-align: middle-center;" />
+        <ui:Button text="Settings" display-tooltip-when-elided="true" name="SettingsButton" style="width: 174px; font-size: 40px;" />
+    </ui:GroupBox>
+    <ui:VisualElement name="LevelPanel" style="width: 100%; height: 100%; align-items: stretch; flex-direction: row; background-color: rgb(254, 255, 158);" />
+    <ui:GroupBox style="height: 78px; background-color: rgb(18, 0, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; flex-direction: row; justify-content: space-between;">
+        <ui:Label text="CITYATION" display-tooltip-when-elided="true" style="font-size: 50%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(254, 255, 158); -unity-text-align: middle-center;" />
+        <ui:Label text="OUT OF ORBIT GAMES" display-tooltip-when-elided="true" style="font-size: 50%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(254, 255, 158); -unity-text-align: middle-center;" />
+    </ui:GroupBox>
+</ui:UXML>

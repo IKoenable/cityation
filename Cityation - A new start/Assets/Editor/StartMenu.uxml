@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/USS/MainMenu.uss?fileID=7433441132597879392&amp;guid=e5d2729e15e62d549a67d1c9004463e5&amp;type=3#MainMenu" />
+    <ui:VisualElement focusable="false" name="BackgroundImage" style="background-image: url(&apos;project://database/Assets/Images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg?fileID=2800000&amp;guid=fd21e44479ac910478ed446329f00edc&amp;type=3#pedro-lastra-Nyvq2juw4_o-unsplash&apos;); width: 2048px; height: 1260px; -unity-background-scale-mode: scale-and-crop; flex-direction: column; align-items: center; justify-content: space-around; max-width: 100%; max-height: 100%;">
+        <ui:GroupBox name="MainMenu" style="background-color: rgba(39, 91, 137, 0.83); width: 447px; height: 338px; justify-content: center; align-items: center; left: auto; position: relative; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 5%; border-bottom-left-radius: 5%; border-top-right-radius: 5%; border-bottom-right-radius: 5%; border-left-color: rgba(0, 42, 118, 0); border-right-color: rgba(0, 42, 118, 0); border-top-color: rgba(0, 42, 118, 0); border-bottom-color: rgba(0, 42, 118, 0); min-width: auto; min-height: auto;">
+            <ui:Button text="GAME" display-tooltip-when-elided="true" name="GameButton" class="MainMenu" />
+            <ui:Button text="SETTINGS" display-tooltip-when-elided="true" name="SettingsButton" class="MainMenu" />
+        </ui:GroupBox>
+        <ui:Button text="QUIT" display-tooltip-when-elided="true" class="MainMenu" style="position: absolute; top: 0; left: auto; right: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

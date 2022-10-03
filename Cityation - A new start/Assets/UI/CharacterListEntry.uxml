@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/CharacterListEntry.uss?fileID=7433441132597879392&amp;guid=348b56ddc6f7f6f49bcaa92460865424&amp;type=3#CharacterListEntry" />
+    <ui:VisualElement name="list-entry">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="character-name" />
+    </ui:VisualElement>
+</ui:UXML>

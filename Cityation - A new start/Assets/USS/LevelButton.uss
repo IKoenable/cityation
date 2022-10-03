@@ -1,0 +1,37 @@
+.LevelButton {
+    width: 256px;
+    height: 304px;
+    margin-left: 64px;
+    margin-right: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    background-color: rgb(255, 121, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: rgb(25, 0, 255);
+}
+
+.LevelButton:hover {
+    width: 256px;
+    height: 304px;
+    margin-left: 64px;
+    margin-right: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    background-color: rgb(25, 0, 255);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: rgb(255, 121, 0);
+}

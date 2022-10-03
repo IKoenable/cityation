@@ -1,0 +1,18 @@
+#text-clock {
+    left: 0;
+    top: 0;
+    height: 99px;
+    width: 284px;
+    font-size: 50px;
+    border-bottom-right-radius: 70px;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    background-color: rgb(255, 176, 8);
+    border-left-color: rgb(3, 3, 132);
+    border-right-color: rgb(3, 3, 132);
+    border-top-color: rgb(3, 3, 132);
+    border-bottom-color: rgb(3, 3, 132);
+    color: rgb(3, 3, 132);
+}
